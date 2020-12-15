@@ -9,6 +9,9 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * @author erenwu
+ */
 public class HdfsApi {
 
     public static final String HOST = "hdfs://192.168.248.130:8020";
