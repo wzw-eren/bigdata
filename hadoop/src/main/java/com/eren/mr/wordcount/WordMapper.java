@@ -1,4 +1,4 @@
-package mr.wordcount;
+package com.eren.mr.wordcount;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

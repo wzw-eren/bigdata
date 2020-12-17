@@ -1,4 +1,4 @@
-package hdfs;
+package com.eren.hdfs;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.hadoop.conf.Configuration;
@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
  */
 public class HdfsApi {
 
-    public static final String HOST = "hdfs://192.168.248.130:8020";
+    public static final String HOST = "com.eren.hdfs://192.168.248.130:8020";
 
     public static void main(String[] args) throws Exception {
         HdfsApi hdfsApi = new HdfsApi();
@@ -48,7 +48,7 @@ public class HdfsApi {
         //3、遍历迭代器
         while (iterator.hasNext()){
             LocatedFileStatus fileStatus = iterator.next();
-            //获取文件的绝对路径 : hdfs://hadoop0:8020/xxx
+            //获取文件的绝对路径 : com.eren.hdfs://hadoop0:8020/xxx
             System.out.println(fileStatus.getPath() + "======"
                     +fileStatus.getPath().getName());
             //文件的block信息
