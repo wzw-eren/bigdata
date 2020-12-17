@@ -1,4 +1,4 @@
-package mr;
+package mr.wordcount;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -16,7 +16,6 @@ import java.io.IOException;
  * 主类，串联mapper和reducer并提供程序的入口
  */
 public class WordCountMain {
-
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration entries = new Configuration();
