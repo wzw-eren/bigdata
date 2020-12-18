@@ -68,12 +68,7 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return "FlowBean{" +
-                ", upFlow='" + upFlow + '\'' +
-                ", downFlow='" + downFlow + '\'' +
-                ", upCountFlow='" + upCountFlow + '\'' +
-                ", downCountFlow='" + downCountFlow + '\'' +
-                '}';
+        return upFlow + " " + downFlow + " " + upCountFlow + " " + downCountFlow;
     }
 
     @Override
@@ -91,4 +86,5 @@ public class FlowBean implements Writable {
         this.downCountFlow = in.readInt();
         this.downFlow = in.readInt();
     }
+
 }

@@ -1,13 +1,8 @@
 package com.eren.mr.flow.sum;
 
 import com.eren.mr.flow.FlowBean;
-import com.eren.mr.wordcount.WordMapper;
-import com.eren.mr.wordcount.WordPartitioner;
-import com.eren.mr.wordcount.WordReducer;
-import com.eren.mr.wordcount.combiner.CombinerReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
@@ -59,7 +54,7 @@ public class SumMain {
 
         //2.8设置输出的路径，保存结果
         job.setOutputFormatClass(TextOutputFormat.class);
-        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sum"));
+        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sum1"));
 
         //三、等待job执行完成
         boolean b = job.waitForCompletion(true);
