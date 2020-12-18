@@ -10,6 +10,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
+ * hdfs相关api
+ *
  * @author erenwu
  */
 public class HdfsApi {
