@@ -7,6 +7,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
+ * 单词统计reducer
+ *
  * @author eren
  *
  * Reducer<KEYIN,VALUEIN,KEYOUT,VALUEOUT>

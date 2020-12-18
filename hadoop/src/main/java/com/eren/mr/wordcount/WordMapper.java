@@ -7,6 +7,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 /**
+ * 单词统计mapper
+ *
  * @author erenwu
  * Mapper<KEYIN, VALUEIN, KEYOUT, VALUEOUT>
  *     KEYIN 是指框架读取到的数据集的key的类型，在默认情况下，读取到key就是一行的数据相对于文本开头的偏移量。key的类型可以为Long吗？
