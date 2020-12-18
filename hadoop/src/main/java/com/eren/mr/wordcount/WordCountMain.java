@@ -58,7 +58,6 @@ public class WordCountMain {
         System.out.println(b);
         System.exit(b ? 0 : 1);
 
-        System.out.println();
     }
 
 }
