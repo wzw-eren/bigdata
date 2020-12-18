@@ -34,6 +34,7 @@ public class WordCountMain {
 
         //2.3设置分区
         job.setPartitionerClass(WordPartitioner.class);
+
         //2.4
 
         //2.5
@@ -45,9 +46,12 @@ public class WordCountMain {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(LongWritable.class);
 
+        //设置NumReduceTask个数，多少个分区，就需要多少个task
+        job.setNumReduceTasks(2);
+
         //2.8设置输出的路径，保存结果
         job.setOutputFormatClass(TextOutputFormat.class);
-        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/wordout/partition"));
+        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/wordout/partition1"));
 
         //三、等待job执行完成
         boolean b = job.waitForCompletion(true);

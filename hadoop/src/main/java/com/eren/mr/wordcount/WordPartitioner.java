@@ -17,7 +17,7 @@ public class WordPartitioner extends Partitioner<Text, LongWritable> {
     public int getPartition(Text text, LongWritable longWritable, int numPartitions) {
         //分区的规则为，返回多少个int，就有多少分区
         //根据单词长度判断，长度>=5的在一个结果文件中，长度<5的在一个文件中
-        if (text.toString().length() < 5) {
+        if (text.toString().length() <= 5) {
             return 0;
         }
         return 1;
