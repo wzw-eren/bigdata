@@ -54,7 +54,7 @@ public class SumMain {
 
         //2.8设置输出的路径，保存结果
         job.setOutputFormatClass(TextOutputFormat.class);
-        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sum1"));
+        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sum2"));
 
         //三、等待job执行完成
         boolean b = job.waitForCompletion(true);

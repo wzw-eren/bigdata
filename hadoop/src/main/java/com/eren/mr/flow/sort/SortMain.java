@@ -29,7 +29,7 @@ public class SortMain {
         //二、设置job对象相关信息
         //2.1设置输入路径，让程序找到源文件位置
         job.setInputFormatClass(TextInputFormat.class);
-        TextInputFormat.addInputPath(job, new Path("hdfs://192.168.248.130:8020/test/mkdirs/flow_sum2.log"));
+        TextInputFormat.addInputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sum2/part-r-00000"));
 
         //2.2设置mapper类型，并设置k2，v2
         job.setMapperClass(SortMapper.class);
@@ -54,7 +54,7 @@ public class SortMain {
 
         //2.8设置输出的路径，保存结果
         job.setOutputFormatClass(TextOutputFormat.class);
-        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sort8"));
+        TextOutputFormat.setOutputPath(job, new Path("hdfs://192.168.248.130:8020/flow/sort9"));
 
         //三、等待job执行完成
         boolean b = job.waitForCompletion(true);

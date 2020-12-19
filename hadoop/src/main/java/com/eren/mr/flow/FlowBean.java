@@ -68,7 +68,7 @@ public class FlowBean implements Writable {
 
     @Override
     public String toString() {
-        return upFlow + " " + downFlow + " " + upCountFlow + " " + downCountFlow;
+        return upFlow + "\t" + downFlow + "\t" + upCountFlow + "\t" + downCountFlow;
     }
 
     @Override

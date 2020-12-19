@@ -18,7 +18,7 @@ public class SortMapper extends Mapper<LongWritable, Text, FlowSortBean, FlowBea
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         //获取数据，根据空格分
-        String[] splits = value.toString().split(" ");
+        String[] splits = value.toString().split("\t");
 
         //组装数据
         FlowBean flowBean = new FlowBean();
